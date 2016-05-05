@@ -1,0 +1,18 @@
+
+<table class="table table-css">
+    <thead>
+      <tr>
+        <th>Title:</th>
+        <th>Text:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @article.title %></td>
+		<td><%= @article.text %></td>
+		<div class = "addthis_sharing_toolbox" data-url="http://localhost:3000/articles/<%=@article.id%>"></div>
+      </tr>
+     
+    </tbody>
+  </table>
+

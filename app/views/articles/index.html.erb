@@ -1,0 +1,31 @@
+<div class="new-image" align="center">
+	<img class="myimg"src="/assets/art.jpg">
+</div>
+<table class="table table-css">
+    <thead>
+      <tr>
+        <th>Title:</th>
+        <th>Text:</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+		<td><%= article.text %></td>
+      </tr>
+     <% end %>
+    </tbody>
+  </table>
+<%= link_to 'New article', new_article_path %>
+<script>
+$(function(){
+	$("#new_article").validate({
+		rules:{
+			article[title]:{
+				required:true
+			}
+		}
+	});
+});
+</script>
